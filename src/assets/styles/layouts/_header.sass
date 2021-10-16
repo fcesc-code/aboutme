@@ -1,0 +1,12 @@
+@use '../base/colors' as *
+@use '../base/fonts' as *
+@use '../base/breakpoints' as *
+
+header
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  @include fallback
+    justify-content: flex-start
+  @include wearablesAndPhones
+    justify-content: center

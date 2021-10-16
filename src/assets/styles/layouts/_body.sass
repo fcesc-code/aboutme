@@ -1,0 +1,26 @@
+@use '../base/colors' as *
+@use '../base/fonts' as *
+@use '../base/breakpoints' as *
+  
+body
+  background-color: $c_bg_ivory
+  margin: 1rem 0
+
+.main_container
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+  @include wearables
+    width: 100vw
+  @include phones
+    width: 97vw
+  @include tablets
+    width: 94vw
+  @include noHD
+    width: 91vw
+  @include SHD
+    width: 86vw
+  @include QHD
+    width: 82vw
+  @include HD4K
+    width: $maxBodyWidth

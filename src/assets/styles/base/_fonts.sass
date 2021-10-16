@@ -1,0 +1,47 @@
+@use 'breakpoints' as *
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&display=swap')
+
+$fsans: 'Open Sans', 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif
+$fserif: 'Noto Serif', 'Georgia', 'Times New Roman', serif
+
+$fsize_standard: 1.025rem
+
+$fsize_xs: .85rem
+$fsize_s: .95rem
+$fsize_m: 1.25rem
+$fsize_l: 1.9rem
+$fsize_xl: 2.5rem
+$fsize_xxl: 3.8rem
+
+$fsize_reduce: .85em
+$fsize_increase: 1.2em
+
+h1, h2, h3, h4, h5, h6
+  @include fallback
+    text-align: left
+  @include wearablesAndPhones
+    text-align: center
+
+h1 
+  font-size: $fsize_xxl
+
+h2
+  font-size: $fsize_xl
+
+h3
+  font-size: $fsize_l
+
+h4
+  font-size: $fsize_m
+
+h5, h6, p, blockquote, ol, ul
+  font-size: $fsize_standard
+  font-family: $fsans
+
+p
+  letter-spacing: .02rem
+
+a, span, cite
+  font-size: inherit
+  font-family: inherit
