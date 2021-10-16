@@ -9,7 +9,6 @@
 Any styleguide is based on choices. Some are good today, and might be terrible in a few years. Others have a personal flavour. There
 may be mistakes and good ones. Since the aim of this exercise was to justify the choice for a styleguide, I checked some styleguides
 first before blindly going for one. My findings:
-\
 
 - There are lots of contradictory statements regarding style css guides. While some dedicate lines to id naming conventions, others 
 abhor the idea of having id as a selector. We can extend this comment to css frameworks, patterns, whatever you name it. Therefore, 
@@ -19,7 +18,6 @@ strikingly clear for html semantic tags for instance. The opportunity to go furt
 - I am a junior developer, continuously learning. I tend to be optimist when it comes down to estimating. Otherwise, I would
 probably not be writing these lines.
 
-\
 So the stage is set for creating this tiny custom styleguide.
 
 ### A pragmatic approach to fanatism
@@ -29,7 +27,7 @@ between a property and its value, etc. Of course these rules improve code readib
 so that we don't have to worry about this bureaucracy. These rules are set up in the configuration files, in case you are interested,
 you can check the rules out by opening these files. They are mostly self-explanatory so the focus in this document lies upon what is 
 not evident.
-\
+
 So what is this document about? It is a custom style guide where some choices and preferences in css writing are expressed. You will
 find expressions such as 'are to be avoided' instead of 'never use'. Rules are to be observed, but we do not pretend to define rules 
 for every situation we might encounter. Linters cannot write a name for us, cannot decide when to create a new class or when to use
@@ -68,7 +66,7 @@ We will organize our application styles in a modular way, taking advantage of th
 
 `@import` rule will be avoided as much as possible. There are some cases where it still will be necessary, but clearly not for our files. 
 Instead, `@use` rule should be used.
-\
+
 Since all files in /base folder contain variables or basic definitions that may be used everywhere, a _index.sass file is to be created in 
 the /base folder, where we `@forward` all base sass rules ready to be used in other files. For exemple, if we want to use any of the 
 variables of colors or typography files we don't need to import these files, just `@use '../base/' as *` and they are ready to use. Since 
@@ -169,6 +167,7 @@ There is no need of so many breakpoints, limits between devices are getting blur
 ### Mobile first
 
 The fallback will be always mobile, beware of the wearables though. For this reason, only following breakpoints are to be used in general:
+
 | mixin name | min-width | mostly known as |
 | ---------- | --------- | --------------- |
 | smallDevices | 360 px | mobile phones |
