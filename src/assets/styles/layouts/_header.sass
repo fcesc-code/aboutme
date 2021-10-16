@@ -1,0 +1,10 @@
+@use '../base/' as *
+
+header
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  @include fallback
+    justify-content: flex-start
+  @include wearablesAndPhones
+    justify-content: center
