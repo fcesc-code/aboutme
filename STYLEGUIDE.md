@@ -7,16 +7,18 @@
 ### Why another styleguide?
 
 Any styleguide is based on choices. Some are good today, and might be terrible in a few years. Others have a personal flavour. There
-may be mistakes and good ones.
+may be mistakes and good ones. Since the aim of this exercise was to justify the choice for a styleguide, I checked some styleguides
+first before blindly going for one. My findings:
 \
-Since the aim of this exercise was to use a styleguide, I checked some styleguides. Some findings:
+
 - There are lots of contradictory statements regarding style css guides. While some dedicate lines to id naming conventions, others 
 abhor the idea of having id as a selector. We can extend this comment to css frameworks, patterns, whatever you name it. Therefore, 
 there is space for filtering out the noise and making personal choices. 
 - There has been clearly an evolution in the css and html landscape. If you see a styleguide from 2005... it is too old. It is 
 strikingly clear for html semantic tags for instance. The opportunity to go further than legacy-based practices is out there.
-- I am an optimist junior developer and still learning. I tend to be optimist when it comes down to estimating. Otherwise, I would
+- I am a junior developer, continuously learning. I tend to be optimist when it comes down to estimating. Otherwise, I would
 probably not be writing these lines.
+
 \
 So the stage is set for creating this tiny custom styleguide.
 
@@ -43,24 +45,24 @@ We will organize our application styles in a modular way, taking advantage of th
 
 - styles/ 
   - base/
-    - // mostly variables and mixins to use anywhere
+    _mostly variables and mixins to use anywhere_
     - _breakpoints.sass
     - _colors.sass 
     - _typography.sass
     - _reset.sass
-    - // we `@foward` them in the index, so that they can be easily used in our code without having to import each single file
+    _we `@foward` them in the index, so that they can be easily used in our code without having to import each single file_
     - _index.sass
   - components/
-    - // elements reusable anywhere
-    - _Examples: button, dropdown_
+    _elements reusable anywhere_
+    - Examples: button, dropdown,...
   - layouts/
-    - \/\/ There play a role organizing the layout, mostly match semanting html elements
+    _There play a role organizing the layout, mostly match semanting html elements_
     - _body.sass
     - _header.sass
     - _footer.sass
     - _etc..._
   - pages/
-    - // where everything get mixed to design a page layout
+    _where everything gets mixed to design a page layout_
 
 ### File and module imports
 
@@ -168,6 +170,7 @@ There is no need of so many breakpoints, limits between devices are getting blur
 
 The fallback will be always mobile, beware of the wearables though. For this reason, only following breakpoints are to be used in general:
 | mixin name | min-width | mostly known as |
+| ---------- | --------- | --------------- |
 | smallDevices | 360 px | mobile phones |
 | medium Devices | 780 px | tablets |
 | standardDevices | 1024 px | computers |
@@ -181,3 +184,6 @@ them. For example: the mixin `wearables` targets devices up to 359 px.
 Fonts must have allways a standard fallback. We never know if the fridge or a car are going to access our site with strange fonts and browsers.
 Some thoughts on accessibility regarding typography contrast are to be considered.
 
+
+
+Go back to [README](https://github.com/fcesc-code/aboutme#README).
