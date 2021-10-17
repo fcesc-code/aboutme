@@ -1,0 +1,51 @@
+@use '../base/' as *
+
+main
+  display: flex
+  flex-flow: row wrap
+  height: 100vh
+  margin: 0
+  font-family: sans-serif
+
+.section__personal
+  background-color: $c_bg_charcoal
+  color: white
+  padding: 1rem
+
+.section__projects
+  background-color: $c_bg_pinetree
+  color: red
+  padding: 1rem
+
+@include fallback
+  .section__featured
+    order: 1
+    width: 100%
+  .section__personal
+    order: 2
+    width: 50%
+  .section__projects
+    order: 3
+    width: 50%
+
+@include allMobile
+  .section__featured
+    order: 2
+    width: 100%
+  .section__personal
+    order: 1
+    width: 100%
+  .section__projects
+    order: 3
+    width: 100%
+
+@include hugeDevices
+  .section__featured
+    order: 2
+    width: 40%
+  .section__personal
+    order: 1
+    width: 20%
+  .section__projects
+    order: 3
+    width: 20%

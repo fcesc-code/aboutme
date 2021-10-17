@@ -1,0 +1,68 @@
+$wearables: 359px
+$phones: 779px
+$tablets: 1023px
+$noHD: 1535px
+$SHD: 2559px
+$QHD: 3839px
+$HD4K: 7679px
+
+// fine-grained very specific use cases
+
+@mixin wearables
+  @media (max-width: #{$wearables})
+    @content
+
+@mixin phones
+  @media (min-width: #{$wearables + 1px}) and (max-width: #{$phones})
+    @content
+
+@mixin tablets
+  @media (min-width: #{$phones + 1px}) and (max-width: #{$tablets})
+    @content
+
+@mixin noHD
+  @media (min-width: #{$tablets + 1px}) and (max-width: #{$noHD})
+    @content
+
+@mixin SHD
+  @media (min-width: #{$noHD + 1px}) and (max-width: #{$SHD})
+    @content
+
+@mixin QHD
+  @media (min-width: #{$SHD + 1px}) and (max-width: #{$QHD})
+    @content
+
+@mixin HD4K
+  @media (min-width: #{$QHD + 1px})
+    @content
+
+// target specific groups
+
+@mixin wearablesAndPhones
+  @media (max-width: #{$phones})
+    @content
+
+@mixin allMobile
+  @media (max-width: #{$tablets})
+    @content
+
+// common use cases
+
+@mixin fallback
+  @content
+
+@mixin smallDevices
+  @media (min-width: #{$wearables + 1px})
+    @content
+
+@mixin mediumDevices
+  @media (min-width: #{$phones + 1px})
+    @content
+    
+@mixin standardDevices
+  @media (min-width: #{$tablets + 1px})
+    @content
+
+@mixin hugeDevices
+  @media (min-width: #{$QHD + 1px})
+    @content
