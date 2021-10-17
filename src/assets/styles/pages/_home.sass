@@ -1,42 +1,51 @@
 @use '../base/' as *
 
-body
+main
   display: flex
+  flex-flow: row wrap
   height: 100vh
   margin: 0
-  padding: 2rem
   font-family: sans-serif
-  font-size: 16px
-  line-height: 24px
-  // background-color: $uoc-bg
-  color: $uoc-corporate
 
-.uoc-container
-  max-width: 800px
-  margin: auto
-  padding: 2rem
-  border-radius: 2rem
-  text-align: center
-  background-color: #fff
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1)
-    // 0 2px 4px -1px rgba(0, 0, 0, 0.06)
+.section__personal
+  background-color: $c_bg_charcoal
+  color: white
+  padding: 1rem
 
-.uoc-logo
-  display: block
-  margin-left: auto
-  margin-right: auto
-  margin-bottom: 1.5rem
-  max-width: 200px
-  height: auto
+.section__projects
+  background-color: $c_bg_pinetree
+  color: red
+  padding: 1rem
 
-  @media (min-width: 540px)
-    max-width: 350px
+@include fallback
+  .section__featured
+    order: 1
+    width: 100%
+  .section__personal
+    order: 2
+    width: 50%
+  .section__projects
+    order: 3
+    width: 50%
 
-.uoc-title
-  font-family: $fserif
-  font-size: 24px
-  font-weight: 700
-  color: $uoc-corporate
+@include allMobile
+  .section__featured
+    order: 2
+    width: 100%
+  .section__personal
+    order: 1
+    width: 100%
+  .section__projects
+    order: 3
+    width: 100%
 
-  @media (min-width: 540px)
-    font-size: 36px
+@include hugeDevices
+  .section__featured
+    order: 2
+    width: 40%
+  .section__personal
+    order: 1
+    width: 20%
+  .section__projects
+    order: 3
+    width: 20%
