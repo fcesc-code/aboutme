@@ -3,16 +3,19 @@
 footer
   text-align: center
   position: relative
+  background-color: black
+  color: white
+  padding: 1rem
   &::before
     content: ''
-    background-color: $c_bg_charcoal
+    background: repeating-linear-gradient(210deg, $c_txt_darkbluish, $c_txt_lightbluish)
     position: absolute
-    height: 2px
+    height: .15rem
     width: 100%
     top: 0
     left: 0
 
-.footer--flex
+.footer
   display: flex
   @include fallback
     flex-flow: row nowrap
