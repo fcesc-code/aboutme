@@ -1,4 +1,5 @@
 @use 'breakpoints' as *
+@use 'colors' as *
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&display=swap')
 
@@ -9,7 +10,7 @@ $fsize_standard: 1.025rem
 
 $fsize_xs: .85rem
 $fsize_s: .95rem
-$fsize_m: 1.25rem
+$fsize_m: 1.2rem
 $fsize_l: 1.9rem
 $fsize_xl: 2.5rem
 $fsize_xxl: 3.8rem
@@ -18,6 +19,7 @@ $fsize_reduce: .85em
 $fsize_increase: 1.2em
 
 h1, h2, h3, h4, h5, h6
+  color: $c_txt_lightbluish
   @include fallback
     text-align: left
   @include wearablesAndPhones
@@ -25,19 +27,25 @@ h1, h2, h3, h4, h5, h6
 
 h1 
   font-size: $fsize_xxl
+  padding: 1.5rem 0
 
 h2
   font-size: $fsize_xl
+  font-family: $fserif
+  padding: 1.25rem 0
 
 h3
   font-size: $fsize_l
+  padding: 1rem 0
 
 h4
   font-size: $fsize_m
+  padding: .75rem 0
 
 h5, h6, p, blockquote, ol, ul
   font-size: $fsize_standard
   font-family: $fsans
+  padding: .5rem 0
 
 p
   letter-spacing: .02rem
@@ -45,3 +53,9 @@ p
 a, span, cite
   font-size: inherit
   font-family: inherit
+
+blockquote
+  font-style: italic
+
+li
+  padding: .2rem 0 .2rem 0
