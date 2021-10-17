@@ -5,19 +5,209 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.sass">
-    <title>UOC Boilerplate</title>
+    <title>Fcesc-code</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <img src="./assets/images/logo.png" alt="Universitat Oberta de Catalunya" class="uoc-logo">
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <header>
+      <p>I like building new things: construction and coding</p>
+    </header>
+    <main>
+      <section class="section__personal">
+        <h2>ABOUT ME</h2>
+        <p>I like architecturing the layout to build things both in physical world and in coding</p>
+
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+          eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam 
+          voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem 
+          sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non 
+          numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis 
+          nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum 
+          iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo 
+          voluptas nulla pariatur?</p>
+        <p>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</p>
+        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give 
+          you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the 
+          master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but 
+          because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor 
+          again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because 
+          occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, 
+          which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to 
+          find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that 
+          produces no resultant pleasure?</p>
+        <p>1914 translation by H. Rackham</p>
+        <article>
+          <h4>Interests</h4>
+          <ul>
+            <li>Architecture: University degree from 2007, built many things since then.</li>
+            <li>Mathematics: Basic algebra for fun.</li>
+            <li>Coding: Love Javascript, Typescript. Leraning Python. This lead me to a bootcamp and a web development master.</li>
+            <li>Languages: I am a native Spanish and Catalan speaker, fluent in English and German, intermediate in French.</li>
+            <li>Classical music: not so good piano player.</li>
+            <li>Trekking: some fresh mountain air feels good.</li>
+          </ul>
+        </article>
+        <article>
+          <h4>Social links</h4>
+          <ul>
+            <li><a href="https://github.com/fcesc-code">Github repo</a></li>
+            <li><a href="https://linkedin.com/in/francescbrugarolas">Linkedin</a></li>
+            <li><a href="https://www.codewars.com/users/fcesc-code">Codewars</a></li>
+            <li><a href="https://twitter.com/cesc_code">Twitter</a></li>
+          </ul>
+        </article>
+      </section>
+      <section class="section__projects">
+        <h2>MY PROJECTS</h2>
+        <ul>
+          <li>
+            <h3><a href="https://quiz-1bc14.web.app/">Quiz</a></h3>
+            <div class="project__info">
+              <ul>
+                <li><a href="https://github.com/fcesc-code/quiz#readme">repo</a></li>
+                <li><time>August 2020</time></li>
+              </ul>
+            </div>
+            <p>We had much fun developing this project.</p>
+            <p>The project is based on this open trivia api. The Open Trivia Database provides a completely 
+              free JSON API for use in programming projects. The data provided by the API is available under 
+              the Creative Commons Attribution-ShareAlike 4.0 International License.</p>
+            <p>Collaborators: Victor Alemany</p>
+            <div class="project__stack">
+              <ul>
+                <li><a href="https://reactjs.org/">React</a></li>
+                <li><a href="https://facebook.github.io/flux/">Flux</a></li>
+                <li><a href="https://sass-lang.com/">scss</a></li>
+                <li><a href="https://firebase.google.com/">Firebase</a></li>
+                <li><a href="https://jestjs.io">Jest</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <h3><a href="">Tender</a></h3>
+            <div class="project__info">
+              <ul>
+                <li><a href="https://github.com/fcesc-code/tender#readme">repo</a></li>
+                <li><time>September 2020</time></li>
+              </ul>
+            </div>
+            <p>This was my final project in Skylab bootcamp.</p>
+            <p>App prototype to help agents working in tendering processes.</p>
+            <p>Mission: 'easier tendering process for organizers and providers'.</p>
+            <p>Main goals: monitor process workflow, share public data across agents, keep private data 
+              hidden, facilitate agreements, bids submittal and review.</p>  
+            <p>Context: this prototype is being developed as a final project for Skylab bootcamp 202007.</p>
+            <div class="project__stack">
+              <ul>
+                <li><a href="https://reactjs.org/">React</a></li>
+                <li><a href="https://sass-lang.com/">sass</a></li>
+                <li><a href="https://reduxjs.org">Redux</a></li>
+                <li><a href="https://oauth.net/2/">OAuth</a></li>
+                <li><a href="https://nodejs.org/en/">Node</a></li>
+                <li><a href="https://expressjs.com/">Express</a></li>
+                <li><a href="https://joi.dev/">Joi</a></li>
+                <li><a href="https://www.mongodb.com/en/cloud/atlas">MongoDB</a></li>
+                <li><a href="https://d3js.org/">D3</a></li>
+                <li><a href="https://mui.com/">Material UI</a></li>
+                <li><a href="https://jestjs.io">Jest</a></li>
+                <li><a href="https://mochajs.org/">Mocha</a></li>
+                <li><a href="https://sinonjs.org/">Sinon</a></li>
+                <li><a href="https://www.chaijs.com/">Chai</a></li>
+                <li><a href="https://istanbul.js.org/">NYC - coverage</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <h3><a href="">Recipes</a></h3>
+            <div class="project__info">
+              <ul>
+                <li><a href="https://github.com/fcesc-code/recipes#readme">repo</a></li>
+                <li><time>June 2021</time></li>
+              </ul>
+            </div>
+            <p></p>
+            <div class="project__stack">
+              <ul>
+                <li>Pure javascript</li>
+                <li><a href="https://github.com/krasimir/navigo">Navigo</a></li>
+                <li><a href="https://babeljs.io/">Babel</a></li>
+                <li><a href="https://parceljs.org/">Parcel</a></li>
+                <li><a href="https://sass-lang.com/">sass</a></li>
+                <li><a href="https://postcss.org/">PostCSS</a></li>
+                <li><a href="https://autoprefixer.github.io/">Autoprefixer</a></li>
+                <li><a href="https://www.netlify.com/">Netlify</a></li>
+                <li><a href="https://firebase.google.com/">Firebase</a></li>
+                <li><a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en">Lighthouse</a></li>
+                <li><a href="https://jestjs.io">Jest</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <h3><a href="">Game of Life</a></h3>
+            <div class="project__info">
+              <ul>
+                <li><a href="https://github.com/fcesc-code/vanillaJS/tree/master/game_of_life#readme">repo</a></li>
+                <li><time>September 2020</time></li>
+              </ul>
+            </div>
+            <p></p>
+            <div class="project__stack">
+              <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas</a></li>
+                <li><a href="https://jasmine.github.io/">Jasmine</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <!-- <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti 
+          quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia 
+          deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam 
+          libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, 
+          omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum 
+          necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur 
+          a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores 
+          repellat.</p>
+        <p>Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</p>
+        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the 
+          charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to 
+          ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying 
+          through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our 
+          power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be 
+          welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of 
+          business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore 
+          always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or 
+          else he endures pains to avoid worse pains.</p>
+        <p>1914 translation by H. Rackham</p> -->
+        <h4>General tech stack</h4>
+        <ul>
+          <li>Javascript</li>
+          <li>Typescript</li>
+          <li>Unit Testing</li>
+          <li>Integration Testing</li>
+          <li>Continuous Deployment</li>
+          <li>REST apis</li>
+          <li>SOLID principles</li>
+          <li>Design Patterns</li>
+          <li><a href="https://github.com">Github</a></li>
+          <li><a href="https://github.com/features/actions">Github actions</a></li>
+        </ul>
+      </section>
+      <section class="section__featured">
+        <iframe class=".fluid" width="560" height="315" src="https://www.youtube.com/embed/8g18jFHCLXk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </section>
+    </main>
+    <footer>
+      <div class="footer--flex">
+        <ul>
+          <li><a href="https://github.com/fcesc-code">Github</a></li>
+          <li>|</li>
+          <li><a href="https://linkeding.com/in/francescbrugarolas">Linkedin</a></li>
+          <li>|</li>
+          <li><a href="https://twitter.com">Twitter</a></li>
+          <li>|</li>
+          <li><a href="https://codewars.com">Codewars</a></li>
+        </ul>
+      </div>
+    </footer>
     <script src="./main.js"></script>
   </body>
 </html>

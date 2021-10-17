@@ -1,8 +1,8 @@
 {
-  "name": "uoc-boilerplate",
-  "version": "3.2.0",
+  "name": "aboutme",
+  "version": "0.0.1",
   "private": true,
-  "description": "Boilerplate for Advanced HTML/CSS Tools UOC students",
+  "description": "Personal site project created from uoc-boilerplate",
   "scripts": {
     "parcel:serve": "parcel src/index.html -p 8123 --target web --open",
     "parcel:build": "parcel build src/index.html --target web --no-source-maps --no-cache",
@@ -25,17 +25,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uoc-advanced-html-css/uoc-boilerplate.git"
+    "url": "git+https://github.com/fcesc-code/curriculum.git"
   },
   "author": {
-    "name": "Jordi Tarrida",
-    "email": "jorditarrida@uoc.edu"
+    "name": "Francesc Brugarolas",
+    "email": "fbrugarolasp@uoc.edu"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/uoc-advanced-html-css/uoc-boilerplate/issues"
+    "url": "https://github.com/fcesc-code/curriculum/issues"
   },
-  "homepage": "https://github.com/uoc-advanced-html-css/uoc-boilerplate#readme",
+  "homepage": "https://github.com/fcesc-code/curriculum/#readme",
+  "keywords": [
+    "Vanilla",
+    "JS",
+    "UOC",
+    "curriculum"
+  ],
   "devDependencies": {
     "@babel/preset-env": "^7.15.0",
     "@parcel/transformer-image": "2.0.0-beta.3.1",
