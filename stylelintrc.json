@@ -1,5 +1,7 @@
 {
   "extends": "stylelint-config-sass-guidelines",
   "plugins": [],
-  "rules": {}
+  "rules": {
+    "no-eol-whitespace": true
+  }
 }
