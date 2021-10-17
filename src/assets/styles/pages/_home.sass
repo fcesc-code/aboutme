@@ -19,7 +19,7 @@ main
 
 .section__projects
   background-color: $c_bg_pinetree
-  color: red
+  color: $c_txt_highlighted
   padding: 1rem
 
 @include fallback
@@ -54,3 +54,54 @@ main
   .section__projects
     order: 3
     width: 20%
+
+.project__info
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  width: 100%
+  font-size: $fsize_s
+
+.project__stack
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  padding: .25rem 0
+
+  & > a
+    display: inline-block
+    background: $c_bg_charcoal
+    color: white
+    padding: 0 .7rem .25rem .7rem
+    margin: .2rem .5rem .2rem 0
+    border-radius: .3rem
+    text-decoration: none
+
+    &:hover, &:focus
+      background: $c_bg_lightgray
+      color: $c_siena
+      text-decoration: solid underline
+
+.project__links--inline
+  color: inherit
+  text-decoration: underline dotted inherit
+
+  &:hover, &:focus
+    color: $c_pastel
+    text-decoration: underline dashed $c_pastel
+
+.project__title
+  color: $c_theme_main
+
+.project__repo, .project__site
+  color: inherit
+  text-decoration: dotted underline
+
+  &:hover, &:focus
+    color: $c_pastel
+    text-decoration: underline dashed $c_pastel
+
+.skill__title
+  color: $c_txt_lightbluish
+  font-weight: bold
+  letter-spacing: .05rem
