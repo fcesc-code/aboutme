@@ -3,7 +3,7 @@
 footer
   text-align: center
   position: relative
-  background-color: black
+  background-color: $c_bg_darkbluish
   color: white
   padding: 1rem
   &::before
@@ -15,7 +15,7 @@ footer
     top: 0
     left: 0
 
-.footer
+.footer__bar
   display: flex
   @include fallback
     flex-flow: row nowrap
@@ -23,6 +23,17 @@ footer
   @include wearablesAndPhones
     flex-flow: column nowrap
     align-items: center
+
+.footer__item
+  color: $c_txt_lightbluish
+  padding: 0 .5rem
+
+.footer__link
+  color: $c_txt_lightbluish
+  text-decoration: dotted underline $c_txt_lightbluish
+  &:hover, &:focus
+    color: $c_txt_contrast
+    text-decoration: solid underline $c_txt_contrast
 
 .footer--hide
   @include fallback

@@ -1,10 +1,11 @@
 @use 'breakpoints' as *
 @use 'colors' as *
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&family=Architects+Daughter&display=swap')
 
 $fsans: 'Open Sans', 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif
 $fserif: 'Noto Serif', 'Georgia', 'Times New Roman', serif
+$fhand: 'Architects Daughter', 'Segoe UI'
 
 $fsize_standard: 1.025rem
 
@@ -26,12 +27,12 @@ h1, h2, h3, h4, h5, h6
     text-align: center
 
 h1 
-  font-size: $fsize_xxl
+  font-size: clamp($fsize_xxl, $fsize_xxl + 2vh, 6.5rem)
   padding: 1.5rem 0
 
 h2
   font-size: $fsize_xl
-  font-family: $fserif
+  font-family: $fhand
   padding: 1.25rem 0
 
 h3
@@ -48,7 +49,8 @@ h5, h6, p, blockquote, ol, ul
   padding: .5rem 0
 
 p
-  letter-spacing: .02rem
+  word-spacing: .04rem
+  letter-spacing: .03rem
 
 a, span, cite
   font-size: inherit

@@ -8,12 +8,12 @@
     <title>Fcesc-code</title>
   </head>
   <body>
-    <header>
+    <!-- <header>
       <p class="header__title">Love construction and coding</p>
-    </header>
+    </header> -->
     <main>
       <section class="section__personal">
-        <h2>ABOUT ME</h2>
+        <h2>About me</h2>
         <blockquote>I like architecturing a layout to build both in physical world and in coding.</blockquote>
 
         <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
@@ -63,7 +63,7 @@
         </article>
       </section>
       <section class="section__projects">
-        <h2>MY PROJECTS</h2>
+        <h2>My projects</h2>
         <ul>
           <li class="project__container">
             <h3 class="project__title">Quiz</h3>
@@ -178,7 +178,7 @@
           else he endures pains to avoid worse pains.</p>
         <p>1914 translation by H. Rackham</p> -->
         <h4>General tech stack</h4>
-        <ul>
+        <ul class="project__stack">
           <li>Javascript</li>
           <li>Typescript</li>
           <li>Unit Testing</li>
@@ -187,23 +187,39 @@
           <li>REST apis</li>
           <li>SOLID principles</li>
           <li>Design Patterns</li>
-          <li><a href="https://github.com">Github</a></li>
-          <li><a href="https://github.com/features/actions">Github actions</a></li>
+          <li>Github</li>
+          <li>Github actions</li>
         </ul>
       </section>
       <section class="section__featured">
-        <iframe class=".fluid" width="560" height="315" src="https://www.youtube.com/embed/8g18jFHCLXk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="game__container">
+          <canvas id="gameScreen"></canvas>
+          <!-- <h2>Conway's game of life</h2> -->
+          <div class="game__options">
+            <ul class="game__stats">
+              <li>Universe tick: <span id="ticks"></span></li>
+              <li>Accum. births: <span id="births"></span></li>
+              <li>Accum. deaths: <span id="deaths"></span></li>
+              <li>Accum. growth: <span id="growth"></span></li>
+              <li>Living blocks: <span id="alive"></span></li>
+              <li>Life density: <span id="density"></span></li>
+            </ul>
+          </div>
+        </div>
+  
+        <script src="./assets/scripts/gameOfLife.js"></script>
+        <!-- <iframe class=".fluid" width="560" height="315" src="https://www.youtube.com/embed/8g18jFHCLXk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
       </section>
     </main>
     <footer>
-        <ul class="footer">
-          <li><a href="https://github.com/fcesc-code">Github</a></li>
-          <li>|</li>
-          <li><a href="https://linkeding.com/in/francescbrugarolas">Linkedin</a></li>
-          <li>|</li>
-          <li><a href="https://twitter.com">Twitter</a></li>
-          <li>|</li>
-          <li><a href="https://codewars.com">Codewars</a></li>
+        <ul class="footer__bar">
+          <li class="footer__item"><a class="footer__link" href="https://github.com/fcesc-code">Github</a></li>
+          <li class="footer__item">|</li>
+          <li class="footer__item"><a class="footer__link" href="https://linkeding.com/in/francescbrugarolas">Linkedin</a></li>
+          <li class="footer__item">|</li>
+          <li class="footer__item"><a class="footer__link" href="https://twitter.com">Twitter</a></li>
+          <li class="footer__item">|</li>
+          <li class="footer__item"><a class="footer__link" href="https://codewars.com">Codewars</a></li>
         </ul>
     </footer>
     <script src="./main.js"></script>
