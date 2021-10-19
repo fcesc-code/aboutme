@@ -5,7 +5,7 @@ footer
   position: relative
   background-color: $c_bg_darkbluish
   color: white
-  padding: 1rem
+  padding: .4rem 1rem
   &::before
     content: ''
     background: repeating-linear-gradient(210deg, $c_txt_darkbluish, $c_txt_lightbluish)
@@ -15,28 +15,20 @@ footer
     top: 0
     left: 0
 
-.footer__bar
-  display: flex
-  @include fallback
-    flex-flow: row nowrap
-    justify-content: center
-  @include wearablesAndPhones
-    flex-flow: column nowrap
-    align-items: center
-
-.footer__item
-  color: $c_txt_lightbluish
-  padding: 0 .5rem
-
-.footer__link
-  color: $c_txt_lightbluish
-  text-decoration: dotted underline $c_txt_lightbluish
-  &:hover, &:focus
-    color: $c_txt_contrast
-    text-decoration: solid underline $c_txt_contrast
-
 .footer--hide
   @include fallback
     visibility: visible
   @include wearablesAndPhones
     display: none
+
+.footer__goTop
+  position: absolute
+  right: 2rem
+  bottom: .7rem
+  font-size: .8rem
+  color: $c_txt_highlighted
+  text-decoration: none
+  & > a:link, & > a:visited
+    color: $c_txt_lightbluish
+  & > a:hover, & > a:focus, & > a:active
+    color: $c_txt_contrast

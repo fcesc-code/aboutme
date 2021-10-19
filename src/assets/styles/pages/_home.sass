@@ -89,26 +89,48 @@ main
       color: $c_siena
       text-decoration: solid underline
 
-.project__links--inline
+.project__links--inline, .skill__links--inline
   color: inherit
-  text-decoration: underline dotted inherit
-
-  &:hover, &:focus
-    color: $c_pastel
-    text-decoration: underline dashed $c_pastel
+  text-decoration: dotted underline
+  &:visited
+    color: inherit
+  &:hover, &:focus, &:active
+    color: $c_txt_contrast
+    text-decoration: underline solid $c_txt_contrast
 
 .project__title
   color: $c_txt_highlighted
 
 .project__repo, .project__site
   color: inherit
-  text-decoration: dotted underline
-
-  &:hover, &:focus
-    color: $c_pastel
-    text-decoration: underline dashed $c_pastel
+  text-decoration: dotted 
+  &:visited
+    color: itxt_contrast
+  &:hover, &:focus, &:active
+    color: $c_txt_contrast
+    text-decoration: underline solid $c_txt_contrast
 
 .skill__title
   color: $c_txt_highlighted
   font-weight: bold
   letter-spacing: .05rem
+
+.social__list
+  display: flex
+  @include fallback
+    flex-flow: row nowrap
+    justify-content: flex-start
+  @include wearablesAndPhones
+    flex-flow: column nowrap
+    align-items: center
+
+.social__item
+  color: $c_txt_lightbluish
+  padding: 0 .5rem
+
+.social__link
+  color: $c_txt_lightbluish
+  text-decoration: dotted underline $c_txt_lightbluish
+  &:hover, &:focus
+    color: $c_txt_contrast
+    text-decoration: solid underline $c_txt_contrast

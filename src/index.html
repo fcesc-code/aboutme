@@ -11,7 +11,7 @@
     <!-- <header>
       <p class="header__title">Love construction and coding</p>
     </header> -->
-    <main>
+    <main id="top">
       <section class="section__personal">
         <h2>About me</h2>
         <blockquote>I like architecturing a layout to build both in physical world and in coding.</blockquote>
@@ -38,32 +38,59 @@
         <article>
           <h4>Skills and interests</h4>
           <ul>
-            <li><span class="skill__title">Architecture:</span> University degree in 2007, Universitat Politècnica de Catalunya. 
-              I have been involved in different design and 
-              construction phases in a wide range of projects: from small appartments, retail projects, 
-              offices implementation and currently logitic centers.
+            <li><span class="skill__title">Architecture:</span> University degree in <time>2007</time>, 
+              <abbr title="Universitat Politècnica de Catalunya"><a class="skill__links--inline" href="https://uoc.edu">UPC</a></abbr>.
+              I have been involved in different design as well as construction phases in a wide range of projects: from small appartments, 
+              retail projects, offices' implementation and currently logitic centers.
             </li>
-            <li><span class="skill__title">Coding:</span> Love Javascript, Typescript. Leraning Python. This lead me to an intensive bootcamp at 
-              Skylab as well as to a web development master, which I will complete this year.</li>
-            <li><span class="skill__title">Languages:</span> I am a native Spanish and Catalan speaker, fluent in English and German, 
-              intermediate in French. My curiosity for foreign languages led me to an Erasmus program 
-              in Berlin in 2005. Since then, I have worked in several Projects abroad (<abbr title="European Union">EU</abbr>).</li>
+            <li><span class="skill__title">Coding:</span> Javascript and Typescript. Leraning Python. This lead me to an intensive bootcamp at 
+              <a class="skill__links--inline" href="https://isdicoders.com/es">Skylab</a> as well as to a web development master at 
+              <abbr title="Universitat Oberta de Catalunya"><a class="skill__links--inline" href="https://uoc.edu">UOC</a></abbr>, 
+              which I will complete this year.</li>
+            <li><span class="skill__title">Languages:</span> I am a native Spanish and Catalan speaker, fluent in English 
+              <a class="skill__links--inline" href="https://www.coe.int/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale">(C2)</a> 
+              and German
+              <a class="skill__links--inline" href="https://www.coe.int/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale">(C2)</a> 
+              , intermediate in French 
+              <a class="skill__links--inline" href="https://www.coe.int/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale">(B2)</a> 
+              . My curiosity for foreign languages led me to an 
+              <a class="skill__links--inline" href="https://erasmus-plus.ec.europa.eu/">Erasmus</a> program 
+              in Berlin in <time>2005</time>. Since then, I have worked in several Projects abroad 
+              (<abbr title="European Union">EU</abbr>).</li>
             <li><span class="skill__title">Classical music:</span> not so good piano player.</li>
             <li><span class="skill__title">Trekking:</span> some fresh mountain air feels good.</li>
           </ul>
         </article>
         <article>
           <h4>Social links</h4>
-          <ul>
-            <a href="https://github.com/fcesc-code">Github repo</a>
-            <a href="https://linkedin.com/in/francescbrugarolas">Linkedin</a>
-            <a href="https://www.codewars.com/users/fcesc-code">Codewars</a>
-            <a href="https://twitter.com/cesc_code">Twitter</a>
+          <ul class="social__list">
+            <li class="social__item"><a class="social__link" href="https://github.com/fcesc-code">Github</a></li>
+            <li class="social__item">|</li>
+            <li class="social__item"><a class="social__link" href="https://linkeding.com/in/francescbrugarolas">Linkedin</a></li>
+            <li class="social__item">|</li>
+            <li class="social__item"><a class="social__link" href="https://twitter.com">Twitter</a></li>
+            <li class="social__item">|</li>
+            <li class="social__item"><a class="social__link" href="https://codewars.com">Codewars</a></li>
+          </ul>
+        </article>
+        <article>
+          <h4>General tech stack</h4>
+          <ul class="project__stack">
+            <li>Javascript</li>
+            <li>Typescript</li>
+            <li>Unit Testing</li>
+            <li>Integration Testing</li>
+            <li>Continuous Deployment</li>
+            <li>REST apis</li>
+            <li>SOLID principles</li>
+            <li>Design Patterns</li>
+            <li>Github</li>
+            <li>Github actions</li>
           </ul>
         </article>
       </section>
       <section class="section__projects">
-        <h2>My projects</h2>
+        <h2 class=".smaller">My projects</h2>
         <ul>
           <li class="project__container">
             <h3 class="project__title">Quiz</h3>
@@ -72,9 +99,12 @@
               <a class="project__site" href="https://quiz-1bc14.web.app/">website</a>
               <time class="project__date">August 2020</time>
             </div>
-            <p>The project is based on this open trivia api. The Open Trivia Database provides a completely 
-              free JSON API for use in programming projects. The data provided by the API is available under 
-              the Creative Commons Attribution-ShareAlike 4.0 International License.</p>
+            <p>The project is based on this open trivia api and was developed as a group project at 
+              <a class="project__links--inline" href="https://isdicoders.com/es">Skylab</a> bootcamp. The 
+              <a class="project__links--inline" href="https://opentdb.com/">Open Trivia Database</a> provides a completely free 
+              JSON API for use in programming projects. The data provided by the API is available under the 
+              <a class="project__links--inline" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+              .</p>
             <p>We had much fun developing this project.</p>
             <p>Collaborators: Victor Alemany</p>
             <div class="project__stack">
@@ -92,8 +122,8 @@
               <a class="project__site" href="">website</a>
               <time class="project__date">September 2020</time>
             </div>
-            <p>This was my final project in Skylab bootcamp. App prototype to help agents working in tendering 
-              processes.</p>
+            <p>This was my final project in <a class="project__links--inline" href="https://isdicoders.com/es">Skylab</a> 
+              bootcamp. App prototype to help agents working in tendering processes.</p>
             <p>Mission: 'easier tendering process for organizers and providers'.</p>
             <p>Main goals: monitor process workflow, share public data across agents, keep private data 
               hidden, facilitate agreements, bids submittal and review.</p>  
@@ -123,9 +153,10 @@
               <time class="project__date">June 2021</time>
             </div>
             <p>The main goal of this project is to create a small site using a custom boilerplate, and 
-              avoiding to use front-end frameworks. A tiny parser has been created to allow a SPA run in 
-              vanilla JS. It is, at least still, not yet another complete JS framework and the aim is not 
-              to clutter the internet with endless packages but to learn coding - mainly for fun.</p>
+              avoiding to use front-end frameworks. A tiny parser has been created to allow a 
+              <abbr title="Single Page Application">SPA</abbr> run in vanilla <abbr title="Javascript">JS</abbr>. 
+              It is, at least still, not yet another complete <abbr title="Javascript">JS</abbr> framework and 
+              the aim is not to fill internet with endless packages but to learn coding - mainly for fun.</p>
             <div class="project__stack">
               <a href="https://github.com/krasimir/navigo">Navigo</a>
               <a href="https://babeljs.io/">Babel</a>
@@ -148,9 +179,12 @@
             </div>
             <p>A vanilla Javascript version of 
               <a class="project__links--inline" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game Of Life</a> 
-              by the British mathematician Horton Conway. Canvas was used to create a board for the game as well as the 
-              animations.</p>
-            <p>This project was developed at an early stage of Skylab bootcamp.</p>
+              by the British mathematician 
+              <a class="project__links--inline" href="https://en.wikipedia.org/wiki/John_Horton_Conway">Horton Conway</a>. 
+              <a class="project__links--inline" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas</a> 
+              was used to create a board for the game as well as the animations.</p>
+            <p>This project was developed at an early stage of 
+              <a class="project__links--inline" href="https://isdicoders.com/es">Skylab</a> bootcamp.</p>
             <div class="project__stack">
               <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas</a>
               <a href="https://jasmine.github.io/">Jasmine</a>
@@ -177,19 +211,6 @@
           always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or 
           else he endures pains to avoid worse pains.</p>
         <p>1914 translation by H. Rackham</p> -->
-        <h4>General tech stack</h4>
-        <ul class="project__stack">
-          <li>Javascript</li>
-          <li>Typescript</li>
-          <li>Unit Testing</li>
-          <li>Integration Testing</li>
-          <li>Continuous Deployment</li>
-          <li>REST apis</li>
-          <li>SOLID principles</li>
-          <li>Design Patterns</li>
-          <li>Github</li>
-          <li>Github actions</li>
-        </ul>
       </section>
       <section class="section__featured">
         <div class="game__container">
@@ -212,15 +233,10 @@
       </section>
     </main>
     <footer>
-        <ul class="footer__bar">
-          <li class="footer__item"><a class="footer__link" href="https://github.com/fcesc-code">Github</a></li>
-          <li class="footer__item">|</li>
-          <li class="footer__item"><a class="footer__link" href="https://linkeding.com/in/francescbrugarolas">Linkedin</a></li>
-          <li class="footer__item">|</li>
-          <li class="footer__item"><a class="footer__link" href="https://twitter.com">Twitter</a></li>
-          <li class="footer__item">|</li>
-          <li class="footer__item"><a class="footer__link" href="https://codewars.com">Codewars</a></li>
-        </ul>
+        <small>Francesc Brugarolas - Eines HTML i CSS II - Universitat Oberta de Catalunya - Octubre 2021</small>
+        <div class="footer__goTop">
+          <a href="#top">&xwedge;</a>
+        </div>     
     </footer>
     <script src="./main.js"></script>
   </body>
