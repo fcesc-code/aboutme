@@ -8,7 +8,7 @@
     "parcel:build": "parcel build src/index.html --target web --no-source-maps --no-cache",
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
-    "build": "npm-run-all test clean stylelint parcel:build",
+    "build": "npm-run-all test clean parcel:build",
     "start": "npm-run-all parcel:serve",
     "stylelint": "stylelint src/**/*.sass",
     "twatch": "jest --watchAll",
