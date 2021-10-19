@@ -7,8 +7,8 @@
 
 # production
 build/
-#dist/
-#**/dist
+dist/
+**/dist
 *.js.map
 
 ### Git ###
