@@ -56,11 +56,17 @@
     "sharp": "^0.28.3",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.21.0"
+    "stylelint-scss": "^3.21.0",
+    "stylelint-selector-bem-pattern": "^2.1.1"
   },
   "stylelint": {
-    "plugins": [ "stylelint-order", "stylelint-scss" ],
+    "plugins": [
+      "stylelint-order",
+      "stylelint-scss",
+      "stylelint-selector-bem-pattern"
+    ],
     "rules": {
       "at-rule-no-unknown": true,
       "at-rule-no-vendor-prefix": true,
@@ -75,11 +81,21 @@
       "declaration-block-no-duplicate-properties": true,
       "declaration-block-single-line-max-declarations": 1,
       "declaration-property-value-disallowed-list": {
-        "border": ["none"],
-        "border-top": ["none"],
-        "border-right": ["none"],
-        "border-bottom": ["none"],
-        "border-left": ["none"]
+        "border": [
+          "none"
+        ],
+        "border-top": [
+          "none"
+        ],
+        "border-right": [
+          "none"
+        ],
+        "border-bottom": [
+          "none"
+        ],
+        "border-left": [
+          "none"
+        ]
       },
       "font-family-no-duplicate-names": true,
       "font-family-no-missing-generic-family-keyword": true,
@@ -93,6 +109,14 @@
       "no-irregular-whitespace": true,
       "number-leading-zero": null,
       "number-no-trailing-zeros": true,
+      "plugin/selector-bem-pattern": {
+        "componentName": "[A-Z]+",
+        "componentSelectors": {
+          "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+          "combined": "^\\.combined-{componentName}-[a-z]+$"
+        },
+        "utilitySelectors": "^\\.util-[a-z]+$"
+      },
       "scss/comment-no-empty": true,
       "scss/double-slash-comment-whitespace-inside": "always",
       "scss/no-global-function-names": true,
