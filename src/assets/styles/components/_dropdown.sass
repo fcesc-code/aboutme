@@ -3,21 +3,22 @@
 
   /* Hide the dropdown's content by default */
   .dropdown__content 
-    display: none
 
     /* Position it right below the trigger element */
-    left: 0
-    padding-top: .2rem
     position: absolute
     top: 100%
+    left: 0
+    padding-top: .2rem
 
     /* It should be on the top of other elements */
     background-color: #fff
     z-index: 9999
+    
+    display: none
 
     /* Size */
-    min-height: 8rem
     max-width: 20rem
+    min-height: 8rem
   
   /* Show the content when hover on the container */
   .dropdown:hover .dropdown__content 

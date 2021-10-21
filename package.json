@@ -109,6 +109,23 @@
       "no-irregular-whitespace": true,
       "number-leading-zero": null,
       "number-no-trailing-zeros": true,
+      "order/properties-order": [
+        "position",
+        "inset",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "z-index",
+        "display",
+        "float",
+        "width",
+        "max-width",
+        "min-width",
+        "height",
+        "max-height",
+        "min-height"
+      ],
       "plugin/selector-bem-pattern": {
         "componentName": "[A-Z]+",
         "componentSelectors": {
@@ -117,6 +134,8 @@
         },
         "utilitySelectors": "^\\.util-[a-z]+$"
       },
+      "property-case": "lower",
+      "property-no-unknown": true,
       "scss/comment-no-empty": true,
       "scss/double-slash-comment-whitespace-inside": "always",
       "scss/no-global-function-names": true,
@@ -127,8 +146,6 @@
       "selector-no-vendor-prefix": true,
       "selector-pseudo-class-no-unknown": true,
       "selector-pseudo-element-no-unknown": true,
-      "property-case": "lower",
-      "property-no-unknown": true,
       "string-no-newline": true,
       "string-quotes": "single",
       "unit-case": "lower",

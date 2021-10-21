@@ -86,13 +86,9 @@ Names should be always meaningful.
 
 ## CSS Selectors
 
-### No reason to use \# css ids
-
-There is no reason to use css ids, except maybe for dynamic script generated DOM elements or similar cases.
-
-### Name delimiters
-
-Use hyphen `-` as name delimiter. CamelCase or underscore should be avoided as name delimiters for css selectors. 
+- There is no reason to use css ids, except maybe for dynamic script generated DOM elements or similar cases.
+- Use hyphen `-` as name delimiter. CamelCase or underscore should be avoided as name delimiters for css selectors. 
+- When grouping selectors, keep individual selectors to a single line.
 
 
 
