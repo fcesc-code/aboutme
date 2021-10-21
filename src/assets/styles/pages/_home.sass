@@ -1,10 +1,10 @@
 @use '../base/' as *
 
 body
-  margin: 0
   display: flex
   flex-direction: column
   height: 100%
+  margin: 0
 
 header, footer
   flex-shrink:0
@@ -21,13 +21,13 @@ main
 
 .section__personal
   background-color: $c_bg_charcoal
-  color: white
   padding: 1rem 2rem
+  color: white
 
 .section__projects
   background-color: $c_bg_darkbluish
-  color: $c_txt_lightbluish
   padding: 1rem 2rem
+  color: $c_txt_lightbluish
 
 @include fallback
   .section__featured
@@ -78,9 +78,9 @@ main
   & > a, & > li
     display: inline-block
     background: $c_bg_charcoal
-    color: white
-    padding: 0 .7rem .25rem .7rem
     margin: .2rem .5rem .2rem 0
+    padding: 0 .7rem .25rem .7rem
+    color: white
     border-radius: .3rem
     text-decoration: none
 
@@ -125,8 +125,8 @@ main
     align-items: center
 
 .social__item
-  color: $c_txt_lightbluish
   padding: 0 .5rem
+  color: $c_txt_lightbluish
 
 .social__link
   color: $c_txt_lightbluish
