@@ -49,21 +49,24 @@ The app can be accessed via following links:
 
 ### Quality gate
 
-- [HTML Validator](https://jigsaw.w3.org/css-validator/): 0 errors | 0 warnings \
-- [WAVE](https://wave.webaim.org/) accessibility validator: 0 errors | 0 alert \
-- [Jest](https://jestjs.io/): 0 tests passed \
+Results from 22nd October 2021:
+
+- [HTML Validator](https://jigsaw.w3.org/css-validator/): 0 errors | 0 warnings
+- [WAVE](https://wave.webaim.org/) accessibility validator: 0 errors | 5 contrast erros | 6 alerts
+- [Jest](https://jestjs.io/): 0 tests passed <- not applicable yet
   | statements | branches | lines | functions |
   | ---------- | -------- | ----- | --------- |
   | x.x% | x.x% | x.x% | x.x% |
-- [Sonarqube](https://www.sonarqube.org/): 0 bugs | 0 code smells | 0 vulnerabilities | 0 security hotspots | 0% code duplication \
-- [css validator](https://jigsaw.w3.org/css-validator/) used with the build css: 0 errors | 7 warnings (from autoprefixer code!)
-- Github [Dependabot security alerts](https://github.blog/2020-06-01-keep-all-your-packages-up-to-date-with-dependabot/): 0 warnings
-- [ESLint](https://eslint.org/): 0 warnings 0 errors
-- [Stylelint](https://stylelint.io/): 0 warnings 0 errors
+- [Sonarqube](https://www.sonarqube.org/): 0 bugs | 1 code smells | 0 vulnerabilities | 0 security hotspots | 0% code duplication
+- [css validator](https://jigsaw.w3.org/css-validator/) used with the build css: 0 errors | 15 warnings (from ignored imported files and autoprefixer code!)
+- Github [Dependabot security alerts](https://github.blog/2020-06-01-keep-all-your-packages-up-to-date-with-dependabot/): 3 warnings from Parcel dependencies. It is not really an issue since Parcel is only used in dev environment and NOT in production.
+- [CodeQL](https://github.com/github/codeql) from Github: 0 alerts
+- [ESLint](https://eslint.org/) (html and js): 0 warnings 0 errors
+- [Stylelint](https://stylelint.io/) (sass): 0 warnings 0 errors
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse) metrics
   | accessibility | performance | good practices | SEO |
   | ------------- | ----------- | -------------- | --- |
-  | 81 / 100 | 86/100 | 100 / 100 | 71 / 100 |
+  | 81 / 100 | 81 /100 | 100 / 100 | 87 / 100 |
 
 ### Content
 
@@ -178,5 +181,4 @@ Wherever appropriate, credit is given to author as a comment in specific file.
 
 ## Author
 
-Francesc Brugarolas, [Github repo](https://github.com/fcesc-code/)\
-\
+Francesc Brugarolas, [Github repo](https://github.com/fcesc-code/)
