@@ -1,8 +1,0 @@
-{
-  "extends": "stylelint-config-sass-guidelines",
-  "plugins": [ "stylelint-scss" ],
-  "rules": {
-    "no-eol-whitespace": true,
-    "number-leading-zero": null
-  }
-}

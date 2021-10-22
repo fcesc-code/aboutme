@@ -1,61 +1,61 @@
 @use '../base/' as *
 
 .game__container
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: flex-start
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-start
 
 canvas
-    border: 0
+  border: 0
 
 h1, h2, h3, h4, h5, h6
-    margin: 2rem 1rem 1rem 1.5rem
+  margin: 2rem 1rem 1rem 1.5rem
 
 h2
-    margin: 0 auto
-    overflow: hidden
-    letter-spacing: .15em
-    white-space: nowrap
-    color: var(--cTexto)
-    text-align: center
-    border-right: .15em solid transparent
-    animation: 2s typing steps(50, end), .6s blinkPrompt steps(50, end)
-    
+  margin: 0 auto
+  overflow: hidden
+  letter-spacing: .15em
+  white-space: nowrap
+  color: var(--cTexto)
+  text-align: center
+  border-right: .15em solid transparent
+  animation: 2s typing steps(50, end), .6s blinkPrompt steps(50, end)
+
 @keyframes typing
-    from  
-        width: 0,
-    to  
-        width: 70% 
+  from
+    width: 0,
+  to
+    width: 70%
 
 @keyframes blinkPrompt
-    from  
-        border-color: transparent 50%
-    to  
-        border-color: $c_theme_main 
+  from
+    border-color: transparent 50%
+  to
+    border-color: $c_theme_main
 
 .game__options
-    margin: 1.5rem 0
+  margin: 1.5rem 0
 
 .game__options > ul
-    display: flex
-    flex-flow: row nowrap
-    align-items: center
-    justify-content: space-around
-    list-style: none
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: space-around
+  list-style: none
 
 .game__options > ul > li
-    display: inline-block
-    margin: 0 2rem
-    color: $c_txt_subtitle
-    text-align: center
-    vertical-align: middle
+  display: inline-block
+  margin: 0 2rem
+  color: $c_txt_subtitle
+  text-align: center
+  vertical-align: middle
 
 .game__options > ul > li > span
-    margin: 0 0 0 .5rem
-    line-height: 100%
-    color: $c_theme_main
-    text-align: left
-    background-color: transparent
-    border: 1px solid $c_bg_darkbluish
-    border-radius: 3px
+  margin: 0 0 0 .5rem
+  line-height: 100%
+  color: $c_theme_main
+  text-align: left
+  background-color: transparent
+  border: 1px solid $c_bg_darkbluish
+  border-radius: 3px
