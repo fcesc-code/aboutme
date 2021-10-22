@@ -1,12 +1,12 @@
 /* general HTML selectors */
-const canv = document.querySelector("#gameScreen");
+const canv = document.querySelector("#game__screen");
 const ctx = canv.getContext("2d");
-const ticks = document.querySelector("#ticks");
-const births = document.querySelector("#births");
-const deaths = document.querySelector("#deaths");
-const growth = document.querySelector("#growth");
-const alive = document.querySelector("#alive");
-const density = document.querySelector("#density");
+const ticks = document.querySelector("#game__stats-ticks");
+const births = document.querySelector("#game__stats-births");
+const deaths = document.querySelector("#game__stats-deaths");
+const growth = document.querySelector("#game__stats-growth");
+const alive = document.querySelector("#game__stats-alive");
+const density = document.querySelector("#game__stats-density");
 
 class Game {
   constructor() {
@@ -59,16 +59,15 @@ class Game {
       }
       this.state.started = true;
       this.state.gameStart = new Date();
+      const baseWidth = window.innerWidth || window.screen.width;
       this.params.width = parseInt(
-        Math.floor(
-          window.innerWidth - (window.innerWidth % this.params.gridCell)
-        ),
+        Math.floor(baseWidth - (baseWidth % this.params.gridCell)),
         10
       );
+      const baseHeight = window.innerHeight || window.screen.height;
       this.params.height = parseInt(
         Math.floor(
-          window.innerHeight * 0.8 -
-            ((window.innerHeight * 0.8) % this.params.gridCell)
+          baseHeight * 0.8 - ((baseHeight * 0.8) % this.params.gridCell)
         ),
         10
       );
@@ -80,9 +79,10 @@ class Game {
       this.state.nextBoard = this.createBoard();
       this.seedRandom();
       this.drawBoard();
-      return setTimeout(() => {
+      setTimeout(() => {
         this.game();
       }, this.params.timeInt);
+      return undefined;
     };
 
     this.calculateDensity = function calculaDensidad() {
@@ -105,7 +105,7 @@ class Game {
 
     this.seedRandom = function puebla() {
       function randomProbability(value) {
-        let probability;
+        let probability = value;
         if (value < 0) {
           probability = -value;
         }
@@ -330,3 +330,5 @@ const juego = new Game();
 window.onload = function startGame() {
   juego.init();
 };
+
+export default Game;

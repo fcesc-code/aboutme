@@ -5,6 +5,7 @@ body
   flex-direction: column
   height: 100%
   margin: 0
+  background-color: $c_bg_darkbluish
 
 header, footer
   flex-shrink:0
@@ -65,9 +66,13 @@ main
 .project__info
   display: flex
   flex-flow: row wrap
-  justify-content: space-between
   width: 100%
   font-size: $fsize_s
+  @include fallback
+    justify-content: flex-start
+    margin: 0 2rem 0 0
+  @include allMobile
+    justify-content: space-between
 
 .project__stack
   display: flex
@@ -105,7 +110,7 @@ main
   color: inherit
   text-decoration: dotted 
   &:visited
-    color: itxt_contrast
+    color: $c_txt_contrast
   &:hover, &:focus, &:active
     color: $c_txt_contrast
     text-decoration: underline solid $c_txt_contrast
@@ -113,7 +118,7 @@ main
 .skill__title
   font-weight: bold
   letter-spacing: .05rem
-  color: $c_txt_highlighted
+  color: $c_txt_contrast
 
 .social__list
   display: flex
