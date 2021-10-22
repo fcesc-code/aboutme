@@ -335,7 +335,7 @@ init-firebase.*
 *.excalidraw
 *.xcf
 *.tex
-*.txt
+#*.txt
 *.tmp
 
 #compressed files
