@@ -11,7 +11,7 @@ Subject: HTML and CSS tools II. October 2021.
 
 ### Repo
 
-A Git repository can be found at https://github.com/fcesc-code/aboutme.git
+A Git repository can be found at [aboutme](https://github.com/fcesc-code/aboutme.git)
 Deploy status: [![Netlify Status](https://api.netlify.com/api/v1/badges/8f4cd862-428f-4a8e-9ab3-eb55e0a27326/deploy-status)](https://app.netlify.com/sites/fcesc-code/deploys)
 
 ### Public web
