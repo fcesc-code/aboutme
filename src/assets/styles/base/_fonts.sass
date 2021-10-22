@@ -1,12 +1,13 @@
 @use 'breakpoints' as *
 @use 'colors' as *
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&family=Architects+Daughter&display=swap')
 
 $fsans: 'Open Sans', 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif
 $fserif: 'Noto Serif', 'Georgia', 'Times New Roman', serif
+$fhand: 'Architects Daughter', 'Segoe UI'
 
-$fsize_standard: 1.025rem
+$fsize_standard: 1rem
 
 $fsize_xs: .85rem
 $fsize_s: .95rem
@@ -26,29 +27,30 @@ h1, h2, h3, h4, h5, h6
     text-align: center
 
 h1 
-  font-size: $fsize_xxl
   padding: 1.5rem 0
+  font-size: clamp($fsize_xxl, 2.8vw, 5.5rem)
 
 h2
-  font-size: $fsize_xl
-  font-family: $fserif
   padding: 1.25rem 0
+  font-size: clamp($fsize_xl, 2.2vw, $fsize_xxl)
+  font-family: $fhand
 
 h3
-  font-size: $fsize_l
   padding: 1rem 0
+  font-size: clamp($fsize_l, 1.8vw, $fsize_xl)
 
 h4
-  font-size: $fsize_m
   padding: .75rem 0
+  font-size: clamp($fsize_m, 1.2vw, $fsize_l)
 
 h5, h6, p, blockquote, ol, ul
-  font-size: $fsize_standard
-  font-family: $fsans
   padding: .5rem 0
+  font-size: clamp($fsize_standard, 1vw, $fsize_standard + .5rem)
+  font-family: $fsans
 
 p
-  letter-spacing: .02rem
+  word-spacing: .04rem
+  letter-spacing: .03rem
 
 a, span, cite
   font-size: inherit
@@ -59,3 +61,9 @@ blockquote
 
 li
   padding: .2rem 0 .2rem 0
+
+.smaller
+  font-size: .8em
+
+.larger
+  font-size: 1.2em

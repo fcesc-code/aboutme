@@ -9,6 +9,7 @@
 build/
 dist/
 **/dist
+*.js.map
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -169,7 +170,6 @@ typings/
 .next
 # Nuxt.js build / generate output
 .nuxt
-dist
 # vuepress build output
 .vuepress/dist
 

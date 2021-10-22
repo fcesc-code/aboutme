@@ -1,31 +1,34 @@
 @use '../base/' as *
 
 footer
-  text-align: center
   position: relative
-  background-color: black
+  padding: .4rem 1rem
   color: white
-  padding: 1rem
+  text-align: center
+  background-color: $c_bg_darkbluish
   &::before
-    content: ''
-    background: repeating-linear-gradient(210deg, $c_txt_darkbluish, $c_txt_lightbluish)
     position: absolute
-    height: .15rem
-    width: 100%
     top: 0
     left: 0
-
-.footer
-  display: flex
-  @include fallback
-    flex-flow: row nowrap
-    justify-content: center
-  @include wearablesAndPhones
-    flex-flow: column nowrap
-    align-items: center
+    width: 100%
+    height: .15rem
+    content: ''
+    background: repeating-linear-gradient(210deg, $c_txt_darkbluish, $c_txt_lightbluish)
 
 .footer--hide
   @include fallback
     visibility: visible
   @include wearablesAndPhones
     display: none
+
+.footer__goTop
+  position: absolute
+  right: 2rem
+  bottom: .7rem
+  font-size: .8rem
+  color: $c_txt_highlighted
+  text-decoration: none
+  & > a:link, & > a:visited
+    color: $c_txt_lightbluish
+  & > a:hover, & > a:focus, & > a:active
+    color: $c_txt_contrast
