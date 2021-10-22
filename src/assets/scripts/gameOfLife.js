@@ -80,9 +80,10 @@ class Game {
       this.state.nextBoard = this.createBoard();
       this.seedRandom();
       this.drawBoard();
-      return setTimeout(() => {
+      setTimeout(() => {
         this.game();
       }, this.params.timeInt);
+      return undefined;
     };
 
     this.calculateDensity = function calculaDensidad() {
@@ -105,7 +106,7 @@ class Game {
 
     this.seedRandom = function puebla() {
       function randomProbability(value) {
-        let probability;
+        let probability = value;
         if (value < 0) {
           probability = -value;
         }
@@ -330,3 +331,5 @@ const juego = new Game();
 window.onload = function startGame() {
   juego.init();
 };
+
+export default Game;
