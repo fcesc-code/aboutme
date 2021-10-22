@@ -35,7 +35,7 @@ a library. In the important decisions we are on our own. This style guide aims t
 bunch of rules: fanatism remains by the linters.
 
 
-## Architecture
+## CSS Architecture
 
 We will organize our application styles in a modular way, taking advantage of the sass / scss features. We will use sass modules.
 
@@ -74,7 +74,7 @@ these are mostly intended as global variables for our site, we are not making us
 
 
 
-## Naming conventions
+## CSS Naming conventions
 
 Names should be always meaningful.
 
@@ -84,15 +84,11 @@ Names should be always meaningful.
 
 
 
-## Selectors
+## CSS Selectors
 
-### No reason to use \# css ids
-
-There is no reason to use css ids, except maybe for dynamic script generated DOM elements or similar cases.
-
-### Name delimiters
-
-Use hyphen `-` as name delimiter. CamelCase or underscore should be avoided as name delimiters for css selectors. 
+- There is no reason to use css ids, except maybe for dynamic script generated DOM elements or similar cases.
+- Use hyphen `-` as name delimiter. CamelCase or underscore should be avoided as name delimiters for css selectors. 
+- When grouping selectors, keep individual selectors to a single line.
 
 
 
@@ -140,7 +136,7 @@ Libraries should be preferred to frameworks.
 
 
 
-## Units
+## CSS Units
 
 In general, relative length units are preferred. Use `rem` units and `em` units only where you want to be relative to a parent element.
 `vw` and `vh` are great relative units in relation to viewport. Sometimes `%` is also useful relative to a parent element.
@@ -178,7 +174,7 @@ The fallback will be always mobile, beware of the wearables though. For this rea
 In addition, some fine-grained target breakpoints have been set which should be scarcely used, even though there might be a (rare) case for 
 them. For example: the mixin `wearables` targets devices up to 359 px. 
 
-### Typography
+### CSS Typography
 
 Fonts must have allways a standard fallback. We never know if the fridge or a car are going to access our site with strange fonts and browsers.
 Some thoughts on accessibility regarding typography contrast are to be considered.
@@ -186,3 +182,33 @@ Some thoughts on accessibility regarding typography contrast are to be considere
 
 
 Go back to [README](https://github.com/fcesc-code/aboutme#README).
+
+## HTML
+
+### Syntax 
+
+- All tags are lowercase.
+- Use two spaces for identation, it is the only way to guarantee code renders the same in any environment.
+- Nested elements should be indented once (two spaces).
+- Declare an explicit charset encoding, for example `<meta charset="utf-8">`.
+
+### Links to js and css files
+
+- Do not use default `type="text/css"` for `<link>` tag
+- Do not use default `type="text/javascript"` for `<script>` tag
+
+### Attributes
+
+- The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value. Therefore, do not specify the value of boolean atributes.
+- Always use double quotes, never single quotes, on attributes.
+- No particular order is enforced for attributes. Having 10 attributes in an html is only readable if it is written in different lines, regardless of the order.
+- Related with the above, when an html tag has more than 3 attributes, they should be separated in different lines.
+
+### Tags 
+
+- Whenever possible, avoid superfluous parent elements when writing HTML
+- Use the least amount of markup with the fewest intricacies whenever possible.
+- Don't include a trailing slash in self-closing elements—the HTML5 spec says they're optional.
+- Don’t omit optional closing tags (e.g. `</li>` or `</body>`).
+- Use semantic html tags where appliable instead of `<div>`.
+- `<html>` tag must include `lang` attribute.

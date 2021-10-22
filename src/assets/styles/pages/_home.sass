@@ -1,33 +1,33 @@
 @use '../base/' as *
 
 body
-  margin: 0
   display: flex
   flex-direction: column
   height: 100%
+  margin: 0
 
 header, footer
   flex-shrink:0
   
 main
-  flex-grow: 1
   display: flex
   flex-flow: row wrap
+  flex-grow: 1
   height: 60%
   margin: 0
   font-family: sans-serif
-  background-color: $c_bg_darkbluish
   color: white
+  background-color: $c_bg_darkbluish
 
 .section__personal
-  background-color: $c_bg_charcoal
-  color: white
   padding: 1rem 2rem
+  color: white
+  background-color: $c_bg_charcoal
 
 .section__projects
-  background-color: $c_bg_darkbluish
-  color: $c_txt_lightbluish
   padding: 1rem 2rem
+  color: $c_txt_lightbluish
+  background-color: $c_bg_darkbluish
 
 @include fallback
   .section__featured
@@ -77,16 +77,16 @@ main
 
   & > a, & > li
     display: inline-block
-    background: $c_bg_charcoal
-    color: white
-    padding: 0 .7rem .25rem .7rem
     margin: .2rem .5rem .2rem 0
+    padding: 0 .7rem .25rem .7rem
+    color: white
+    background: $c_bg_charcoal
     border-radius: .3rem
     text-decoration: none
 
     &:hover, &:focus
-      background: $c_bg_lightgray
       color: $c_siena
+      background: $c_bg_lightgray
       text-decoration: solid underline
 
 .project__links--inline, .skill__links--inline
@@ -111,9 +111,9 @@ main
     text-decoration: underline solid $c_txt_contrast
 
 .skill__title
-  color: $c_txt_highlighted
   font-weight: bold
   letter-spacing: .05rem
+  color: $c_txt_highlighted
 
 .social__list
   display: flex
@@ -125,8 +125,8 @@ main
     align-items: center
 
 .social__item
-  color: $c_txt_lightbluish
   padding: 0 .5rem
+  color: $c_txt_lightbluish
 
 .social__link
   color: $c_txt_lightbluish
