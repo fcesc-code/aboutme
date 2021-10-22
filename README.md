@@ -12,7 +12,7 @@ Subject: HTML and CSS tools II. October 2021.
 ### Repo
 
 A Git repository can be found at https://github.com/fcesc-code/aboutme.git
-Deploy status: _will be added_
+Deploy status: [![Netlify Status](https://api.netlify.com/api/v1/badges/8f4cd862-428f-4a8e-9ab3-eb55e0a27326/deploy-status)](https://app.netlify.com/sites/fcesc-code/deploys)
 
 ### Public web
 
@@ -51,15 +51,19 @@ The app can be accessed via following links:
 
 - [HTML Validator](https://jigsaw.w3.org/css-validator/): 0 errors | 0 warnings \
 - [WAVE](https://wave.webaim.org/) accessibility validator: 0 errors | 0 alert \
-- [Jest](https://jestjs.io/): 15 tests passed \
+- [Jest](https://jestjs.io/): 0 tests passed \
   | statements | branches | lines | functions |
   | ---------- | -------- | ----- | --------- |
   | x.x% | x.x% | x.x% | x.x% |
 - [Sonarqube](https://www.sonarqube.org/): 0 bugs | 0 code smells | 0 vulnerabilities | 0 security hotspots | 0% code duplication \
 - [css validator](https://jigsaw.w3.org/css-validator/) used with the build css: 0 errors | 7 warnings (from autoprefixer code!)
 - Github [Dependabot security alerts](https://github.blog/2020-06-01-keep-all-your-packages-up-to-date-with-dependabot/): 0 warnings
-- Eslint 0 warnings 0 errors
-- Stylelint 0 warnings 0 errors
+- [ESLint](https://eslint.org/): 0 warnings 0 errors
+- [Stylelint](https://stylelint.io/): 0 warnings 0 errors
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) metrics
+  | accessibility | performance | good practices | SEO |
+  | ------------- | ----------- | -------------- | --- |
+  | 81 / 100 | 86/100 | 100 / 100 | 71 / 100 |
 
 ### Content
 
