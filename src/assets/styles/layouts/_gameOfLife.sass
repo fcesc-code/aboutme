@@ -1,6 +1,6 @@
 @use '../base/' as *
 
-.game__container
+.game
   display: flex
   flex-direction: column
   align-items: center
@@ -9,10 +9,7 @@
 canvas
   border: 0
 
-h1, h2, h3, h4, h5, h6
-  margin: 2rem 1rem 1rem 1.5rem
-
-h2
+.game__title
   margin: 0 auto
   overflow: hidden
   letter-spacing: .15em
@@ -34,24 +31,22 @@ h2
   to
     border-color: $c_theme_main
 
-.game__options
-  margin: 1.5rem 0
-
-.game__options > ul
+.game__stats-container
   display: flex
   flex-flow: row nowrap
   align-items: center
   justify-content: space-around
+  margin: 1.5rem 0
   list-style: none
 
-.game__options > ul > li
+.game__stats-container > li
   display: inline-block
   margin: 0 2rem
   color: $c_txt_subtitle
   text-align: center
   vertical-align: middle
 
-.game__options > ul > li > span
+.game__stats-container > li > span
   margin: 0 0 0 .5rem
   line-height: 100%
   color: $c_theme_main

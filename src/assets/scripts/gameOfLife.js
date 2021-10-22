@@ -1,12 +1,12 @@
 /* general HTML selectors */
-const canv = document.querySelector("#gameScreen");
+const canv = document.querySelector("#game__screen");
 const ctx = canv.getContext("2d");
-const ticks = document.querySelector("#ticks");
-const births = document.querySelector("#births");
-const deaths = document.querySelector("#deaths");
-const growth = document.querySelector("#growth");
-const alive = document.querySelector("#alive");
-const density = document.querySelector("#density");
+const ticks = document.querySelector("#game__stats-ticks");
+const births = document.querySelector("#game__stats-births");
+const deaths = document.querySelector("#game__stats-deaths");
+const growth = document.querySelector("#game__stats-growth");
+const alive = document.querySelector("#game__stats-alive");
+const density = document.querySelector("#game__stats-density");
 
 class Game {
   constructor() {
