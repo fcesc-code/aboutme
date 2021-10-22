@@ -13,6 +13,7 @@
     "parcel:build": "parcel build src/index.html --target web --no-source-maps --no-cache",
     "start": "npm-run-all parcel:serve",
     "stylelint": "stylelint src/assets/styles/**/*.sass --syntax sass",
+    "stylelintfix": "stylelint src/assets/styles/**/*.sass --syntax sass --fix",
     "tcoverage": "jest --coverage",
     "tdev": "jest --watchAll --coverage",
     "test": "jest",

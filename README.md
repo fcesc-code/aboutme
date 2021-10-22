@@ -80,7 +80,6 @@ The app can be accessed via following links:
 ### Code
 
 - [SOLID Principles](https://en.wikipedia.org/wiki/SOLID)
-- [Reactive programming](https://en.wikipedia.org/wiki/Reactive_programming)
 - Common [Software Design patterns](https://en.wikipedia.org/wiki/Software_design_pattern)
 
 ### Continuous delivery
@@ -93,7 +92,7 @@ Automated security alerts for the repository.
 
 | Version | Date            | Status       | Content         |
 | ------- | --------------- | ------------ | --------------- |
-| 0.0.1   | 03 October 2021 | Not released | Initial version |
+| 0.0.1   | 22 October 2021 | Released     | Initial version |
 
 ### Version 0.0.1
 
@@ -139,12 +138,19 @@ Always run the following commands during the development stage and for productio
 
 ### Commands
 
-| Command         | Description                                                                                                                                                                                                                                                                                                                                                         |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm run dev`   | Runs a local web server for development and opens the browser to display it. Automatically compiles styles and scripts whenever a file in `src/` is changed, and live reloads the browser. This is what _must be run_ on the development stage.                                                                                                                     |
+| Command | Description |
+| ------- | ----------- |
+| `npm run dev` | Runs a local web server for development and opens the browser to display it. Automatically compiles styles and scripts whenever a file in `src/` is changed, and live reloads the browser. This is what _must be run_ on the development stage. |
 | `npm run build` | Compiles and minifies and optimizes the files in the assets folder. The generated compiled and optimized files are located in the `dist/` folder. This is what _must be run_ before publishing the project. This is also the build command to be run by external deployment services such as Netlify. The publishable files are then located in the `dist/` folder. |
-| `npm run clean` | Deletes the current `/dist` folder and cache folders.                                                                                                                                                                                                                                                                                                               |
-| `npm run test`  | Displays a success message if everything is working as expected.                                                                                                                                                                                                                                                                                                    |
+| `npm run clean` | Deletes the current `/dist` folder and cache folders. |
+| `npm run lint` | Runs ESLint for javascript and html files, showing a report. If you are using VSCode, the extension for ESLint works too. |
+| `npm run lintfix`| Runs ESLint aud automatically fixes the warnings and errors that can be fixed. |
+| `npm run stylelint` | Runs Stylelint for sass files, showing a report. If you are using VSCode, the extnesion for ESLint works too. |
+| `npm run stylelintfix` | Runs Stylelint for sass files and fixes the errors that can be fixed. |
+| `npm run test`  | Displays a success message if everything is working as expected. |
+| `npm run twatch` | Runs jest in watch mode, so that tests are re-run if a file is modified. |
+| `npm run tcoverage` | Runs jest and produces a coverage report. |
+| `npm run tdev` | Runs jest in watch mode and produces a coverage report as well. |
 
 ## Contributions
 
