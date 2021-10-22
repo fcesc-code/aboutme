@@ -6,12 +6,12 @@
   },
   "extends": ["airbnb-base", "prettier"],
   "ignorePatterns": [
-    "**/styles/**/*.sass",
-    "**/images/*.*",
+    "*.sass",
+    "*.png",
     "*.txt",
-    "*.spec.js",
-    "*mock*.*",
-    "*keys*.*"
+    "*.spec.*",
+    "*.mock.*",
+    "*.keys.*"
   ],
   "parserOptions": {
     "ecmaVersion": 12,
