@@ -1,4 +1,12 @@
-'use strict';
+/* general HTML selectors */
+const canv = document.querySelector('#gameScreen');
+const ctx = canv.getContext('2d');
+const ticks = document.querySelector('#ticks');
+const births = document.querySelector('#births');
+const deaths = document.querySelector('#deaths');
+const growth = document.querySelector('#growth');
+const alive = document.querySelector('#alive');
+const density = document.querySelector('#density');
 
 class Game {
     constructor(){
@@ -47,22 +55,20 @@ class Game {
             this.matrixize();
             if(this.state.started === true){
                 return this.game();
-            } else {
-                this.state.started = true;
-                this.state.gameStart = new Date();
-                this.params.width = parseInt(Math.floor(window.innerWidth - (window.innerWidth % this.params.gridCell)));
-                this.params.height = parseInt(Math.floor((window.innerHeight * 0.8) - ((window.innerHeight * 0.8) % this.params.gridCell)));
-                canv.width = this.params.width;
-                canv.height = this.params.height;
-                this.params.hcells = this.params.width / this.params.gridCell;
-                this.params.vcells = this.params.height / this.params.gridCell;
-                this.state.board = this.createBoard();
-                this.state.nextBoard = this.createBoard();
-                this.seedRandom();
-                this.drawBoard();
-                setTimeout(()=>{ this.game(); }, this.params.timeInt);
-                return;
             }
+            this.state.started = true;
+            this.state.gameStart = new Date();
+            this.params.width = parseInt(Math.floor(window.innerWidth - (window.innerWidth % this.params.gridCell)), 10);
+            this.params.height = parseInt(Math.floor((window.innerHeight * 0.8) - ((window.innerHeight * 0.8) % this.params.gridCell)), 10);
+            canv.width = this.params.width;
+            canv.height = this.params.height;
+            this.params.hcells = this.params.width / this.params.gridCell;
+            this.params.vcells = this.params.height / this.params.gridCell;
+            this.state.board = this.createBoard();
+            this.state.nextBoard = this.createBoard();
+            this.seedRandom();
+            this.drawBoard();
+            return setTimeout(()=>{ this.game(); }, this.params.timeInt);
         }
 
         this.calculateDensity = function calculaDensidad (){
@@ -71,9 +77,9 @@ class Game {
         }
 
         this.createBoard = function creaTablero(){
-            let board = [];
+            const board = [];
             for (let i=0; i< this.params.vcells; i++){
-                let row = [];
+                const row = [];
                 for (let j = 0; j< this.params.hcells; j++){
                     row.push(0);
                 }
@@ -84,23 +90,15 @@ class Game {
         }
 
         this.seedRandom = function puebla(){
-            for (let i=0; i<this.params.vcells; i++){
-                for (let j=0; j<this.params.hcells; j++){
-                    let temp = randomProbability(20);
-                    let index = Math.floor(this.getRandomNumber() * temp.length);
-                    let value = temp[index];
-                    if (value === 1){ this.state.births++; }
-                    this.state.nextBoard[i][j] = value;
-                }
-            }
-            function randomProbability(probability){
-                if(probability < 0){ probability = -probability;}
-                if(probability < 1 && probability > 0){ probability = probability*100;}
-                if(probability > 100){
-                    let divisorToTargetRange = 10 ** (String(probability).length - 1);
+            function randomProbability(value){
+                let probability;
+                if(value < 0){ probability = -value;}
+                if(value < 1 && value > 0){ probability = value*100;}
+                if(value > 100){
+                    const divisorToTargetRange = 10 ** (String(probability).length - 1);
                     probability = Math.floor(probability / divisorToTargetRange);
                 }
-                let notRandom = [];
+                const notRandom = [];
                 for (let i=0; i<probability; i++){
                     notRandom.push(1);
                 }
@@ -109,14 +107,16 @@ class Game {
                 }
                 return notRandom;
             }
-        }
 
-        this.seedFigures = function pueblaFiguras(figure){
-            let xcenter = Math.floor(this.params.hcells / 2);
-            let ycenter = Math.floor(this.params.hcells / 2);
-            console.log(xcenter, ycenter);
-            const figures = superfigures();
-            return figures.figure;
+            for (let i=0; i<this.params.vcells; i++){
+                for (let j=0; j<this.params.hcells; j++){
+                    const temp = randomProbability(20);
+                    const index = Math.floor(this.getRandomNumber() * temp.length);
+                    const value = temp[index];
+                    if (value === 1){ this.state.births++; }
+                    this.state.nextBoard[i][j] = value;
+                }
+            }
         }
 
         this.drawBoard = function dibujaTablero(){
@@ -125,8 +125,8 @@ class Game {
             ctx.fillRect(0, 0, canv.width, canv.height);
             for (let i=0; i<this.params.height; i += this.params.gridCell){
                 for (let j=0; j<this.params.width; j += this.params.gridCell){
-                    let py = Math.floor(i / this.params.gridCell);
-                    let px = Math.floor(j / this.params.gridCell);
+                    const py = Math.floor(i / this.params.gridCell);
+                    const px = Math.floor(j / this.params.gridCell);
                     if (this.state.nextBoard[py][px] === 1){
                         if (this.state.board[py][px] === 0){
                             ctx.fillStyle = this.params.styleBackgroundBorn;
@@ -138,8 +138,8 @@ class Game {
                         ctx.font = '10pt sans-serif';
                         ctx.textAlign = 'center';
                         ctx.textBaseline = 'middle';
-                        let text = this.params.matrixStyle[Math.floor(this.getRandomNumber() * this.params.matrixLength)];
-                        let centerOffset = this.params.gridCell / 2;
+                        const text = this.params.matrixStyle[Math.floor(this.getRandomNumber() * this.params.matrixLength)];
+                        const centerOffset = this.params.gridCell / 2;
                         ctx.strokeStyle = this.params.styleMesh;
                         ctx.strokeRect(j, i, this.params.gridCell, this.params.gridCell);
                         ctx.fillText(text, j + centerOffset, i + centerOffset);
@@ -157,18 +157,20 @@ class Game {
                     }
                 }
             }
-            (this.state.alive === 0)? this.state.growth = '0.00 %': this.state.growth = `${(((this.state.births - this.state.deaths) / (this.state.births + this.state.deaths)) * 100).toFixed(2)} %`;
+            this.state.growth = (this.state.alive === 0) 
+                ? '0.00 %'
+                : `${(((this.state.births - this.state.deaths) / (this.state.births + this.state.deaths)) * 100).toFixed(2)} %`;
             this.state.density = this.calculateDensity();
             this.updateUIinfo();
         }
 
         this.fadeOut = function desvanece(){
-            this.state.fade = this.state.fade + 8;
+            this.state.fade += 8;
             if (this.state.fade <= 256){
                 setTimeout(()=>{
                     let hex = this.state.fade.toString(16);
-                    if (hex.length === 1){ hex = '0' + hex; }
-                    ctx.fillStyle = '' + this.params.styleBackgroundDead + hex; 
+                    if (hex.length === 1){ hex = `0${hex}`; }
+                    ctx.fillStyle = `${this.params.styleBackgroundDead}${hex}`; 
                     ctx.fillRect(0, 0, canv.width, canv.height);
                     this.fadeOut();
                 }, this.params.timeInt);
@@ -205,15 +207,14 @@ class Game {
             if (this.state.board[px][py] === 1){aliveNeighbours--;}
             if (aliveNeighbours < 2 || aliveNeighbours > 3){
                 return 0;
-            } else {
-                if (this.state.board[px][py] === 0 && aliveNeighbours === 3){
-                    return 1;
-                } else if (this.state.board[px][py] === 0 && aliveNeighbours === 2){
-                    return 0;
-                } else {
-                    return 1;
-                }
+            } 
+            if (this.state.board[px][py] === 0 && aliveNeighbours === 3){
+                return 1;
             }
+            if (this.state.board[px][py] === 0 && aliveNeighbours === 2){
+                return 0;
+            }
+            return 1;
         }  
 
         this.test = function testea(numberOfTicks, board = this.state.board){
@@ -230,34 +231,34 @@ class Game {
             this.state.board = this.state.nextBoard;
             if (this.state.ticks <= numberOfTicks) {
                 return this.test(numberOfTicks);
-            } else {
-                this.state.endType = 'end of test';
-                this.state.gameEnd = new Date();
-                return this.crop(this.state.board);
             }
+            this.state.endType = 'end of test';
+            this.state.gameEnd = new Date();
+            return this.crop(this.state.board);
+
         }
 
         this.expand = function expande(board){
-            let rows = board.length;
-            let cols = board[0].length;
-            let expandedBoard = Array.from(0);
-            let expandedRow = Array.from(0);
+            const rows = board.length;
+            const cols = board[0].length;
+            const expandedBoard = Array.from(0);
+            const expandedRow = Array.from(0);
             for (let i=0; i<cols; i++){
                 expandedRow.push(0);
             }
             for (let i=0; i<rows; i++){
-                expanededBoard.push([0, 0, ...board[i], 0, 0]);
+                expandedBoard.push([0, 0, ...board[i], 0, 0]);
             }
             for (let i=1; i<2; i++){
-                expandedBoard.unshift(epandedRow);
-                expandedBoard.push(epandedRow);
+                expandedBoard.unshift(expandedRow);
+                expandedBoard.push(expandedRow);
             }
         }
 
         this.crop = function recorta(board){
-            let resultBoard = [];
+            const resultBoard = [];
             for (let i=2; i<board.length-2; i++){
-                let row = board[i].shift().shift().pop().pop();
+                const row = board[i].shift().shift().pop().pop();
                 resultBoard.push(row);
             }
             return resultBoard;
@@ -270,36 +271,24 @@ class Game {
             this.nextTick();
             if(this.state.tickCount < this.params.overflowLimit){
                 setTimeout(()=>{this.game();}, this.params.timeInt);
-                return;
             } else {
                 this.state.gameEnd = new Date();
                 this.state.endType = 'Preset limit of ticks reached';
                 this.fadeOut();
-                return;
             }
         }
 
         this.getRandomNumber = function numAleatorio(){
             const crypto = window.crypto || window.msCrypto;
-            let array = new Uint32Array(1);
-            let value = crypto.getRandomValues(array);
-            return Number(value).toFixed(17) / (Math.pow(2, 32) - 1);
+            const array = new Uint32Array(1);
+            const value = crypto.getRandomValues(array);
+            return Number(value).toFixed(17) / ((2 ** 32) - 1);
         }
     }
 }
 
-/* general HTML selectors */
-let canv = document.querySelector('#gameScreen');
-let ctx = canv.getContext('2d');
-let ticks = document.querySelector('#ticks');
-let births = document.querySelector('#births');
-let deaths = document.querySelector('#deaths');
-let growth = document.querySelector('#growth');
-let alive = document.querySelector('#alive');
-let density = document.querySelector('#density');
-
 /* create & start game */
-let juego = new Game();
-window.onload = function () {
+const juego = new Game();
+window.onload = function startGame () {
     juego.init();
 }
