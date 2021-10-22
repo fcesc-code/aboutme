@@ -59,16 +59,15 @@ class Game {
       }
       this.state.started = true;
       this.state.gameStart = new Date();
+      const baseWidth = window.innerWidth || window.screen.width;
       this.params.width = parseInt(
-        Math.floor(
-          window.innerWidth - (window.innerWidth % this.params.gridCell)
-        ),
+        Math.floor(baseWidth - (baseWidth % this.params.gridCell)),
         10
       );
+      const baseHeight = window.innerHeight || window.screen.height;
       this.params.height = parseInt(
         Math.floor(
-          window.innerHeight * 0.8 -
-            ((window.innerHeight * 0.8) % this.params.gridCell)
+          baseHeight * 0.8 - ((baseHeight * 0.8) % this.params.gridCell)
         ),
         10
       );
