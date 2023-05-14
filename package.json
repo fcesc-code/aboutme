@@ -62,7 +62,7 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.8.8",
     "rimraf": "^5.0.0",
-    "sass": "^1.32.5",
+    "sass": "^1.62.1",
     "sharp": "^0.32.1",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0",
