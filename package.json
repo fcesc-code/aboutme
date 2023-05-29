@@ -61,7 +61,7 @@
     "parcel": "2.8.3",
     "postcss-preset-env": "^8.4.1",
     "prettier": "^2.8.8",
-    "rimraf": "^5.0.0",
+    "rimraf": "^5.0.1",
     "sass": "^1.62.1",
     "sharp": "^0.32.1",
     "stylelint": "^13.13.1",
